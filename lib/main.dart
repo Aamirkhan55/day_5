@@ -14,10 +14,11 @@ class MyApp extends StatelessWidget {
       title: 'GridView Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orangeAccent),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.amber[200],
+          backgroundColor: Colors.amber[300],
         ),
+        useMaterial3: true,
       ),
       home: const GridViewScreen(),
     );
