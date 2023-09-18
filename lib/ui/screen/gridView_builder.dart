@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:day_5/ui/screen/gridView_custom.dart';
 import 'package:flutter/material.dart';
 
 class GridViewBuilder extends StatelessWidget {
@@ -9,7 +10,7 @@ class GridViewBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('GridView Builder'),
+        title: const Text('Builder GridView'),
       ),
       body: GridView.builder(
         itemCount: 15,
@@ -30,6 +31,14 @@ class GridViewBuilder extends StatelessWidget {
             );
         }
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.push(context, 
+            MaterialPageRoute(
+              builder: (context) => const CustomGridView()));
+          },
+          child: const Icon(Icons.arrow_forward_ios),
+          ),
     );
   }
 }
